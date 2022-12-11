@@ -1,8 +1,9 @@
 #include <gRPCServer.hpp>
 #include <iostream>
+#include <memory>
 
 int main() {
-  gRPCServer* grpcComm = new gRPCServer();
-  delete grpcComm;
+  std::unique_ptr<gRPCServer> grpcComm =
+      std::unique_ptr<gRPCServer>(new gRPCServer());
   return 0;
 }
