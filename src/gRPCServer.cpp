@@ -2,6 +2,15 @@
 
 #include <iostream>
 
-gRPCServer::gRPCServer() { std::cout << "testing 123" << std::endl; }
+gRPCServer::gRPCServer() { std::cout << "gRPCServer Constructor" << std::endl; }
 
-gRPCServer::~gRPCServer() {}
+gRPCServer::~gRPCServer() {
+  std::cout << "gRPCServer getting DESTROYED" << std::endl;
+}
+
+void* gRPCServer::threadRun() {
+  while (true) {
+    std::cout << "HAHAH" << std::endl;
+    sleep(1);
+  }
+}

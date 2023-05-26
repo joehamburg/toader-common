@@ -1,1 +1,1 @@
-add_library(src gRPCServer.cpp)
+add_library(src BaseThread.cpp gRPCServer.cpp)

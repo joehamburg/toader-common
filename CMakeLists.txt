@@ -8,4 +8,4 @@ add_subdirectory(src)
 
 target_include_directories(test PUBLIC src)
 target_link_directories(test PRIVATE src)
-target_link_libraries(test src)
+target_link_libraries(test src -lpthread)
