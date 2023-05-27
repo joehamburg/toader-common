@@ -9,8 +9,8 @@ gRPCServer::~gRPCServer() {
 }
 
 void* gRPCServer::threadRun() {
-  while (true) {
+  while (!isExitRequested()) {
     std::cout << "HAHAH" << std::endl;
-    sleep(1);
   }
+  return nullptr;
 }
